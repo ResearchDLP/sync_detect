@@ -2,7 +2,6 @@ import getpass
 import os
 import time
 
-
 #username = getpass.getuser()
 #print("Username :" + username + "\n")
 #print("Default dropbox folder : ")
@@ -24,3 +23,5 @@ for path, dirs, files in os.walk(r'C:\Users\ARJ'):
             print(os.path.join(path, f))
 
 print('Scanned ' + str(i) + ' files')
+
+os.system('wmic process get description,executablepath | find /I "dropbox" ')
